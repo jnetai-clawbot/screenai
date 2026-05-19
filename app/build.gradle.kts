@@ -27,10 +27,10 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = rootProject.file("screenai.jks").takeIf { it.exists() }
-            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: ""
-            keyAlias = "screenai"
-            keyPassword = System.getenv("KEY_PASSWORD") ?: ""
+            storeFile = rootProject.file("keystore.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "changeit"
+            keyAlias = System.getenv("KEY_ALIAS") ?: "screenai"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: "changeit"
         }
     }
 
