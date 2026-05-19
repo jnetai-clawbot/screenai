@@ -1,0 +1,43 @@
+ScreenAI v1.0.0 - Initial Release
+==================================
+
+Files Created:
+- Root: build.gradle.kts, settings.gradle.kts, gradle.properties, .gitignore
+- Root: README.md, LICENSE, CHANGELOG.md
+- Gradle: gradle/wrapper/gradle-wrapper.properties (Gradle 8.5)
+- CI/CD: .github/workflows/build-debug.yml, build-release.yml
+- App: app/build.gradle.kts, app/proguard-rules.pro
+- Manifest: app/src/main/AndroidManifest.xml
+- Resources: res/values/strings.xml, themes.xml, colors.xml
+- Resources: res/drawable/ic_launcher_foreground.xml
+- Resources: res/mipmap-anydpi-v26/ic_launcher.xml, ic_launcher_round.xml
+- Core: ScreenAIApp.kt (Application class)
+- Core: MainActivity.kt (Compose activity with bottom navigation)
+- Data: data/model/Models.kt (ScreenAnalysis entity, AnalysisType enum, AnalysisResult)
+- Data: data/db/DAOs.kt (Room DAO with search, filter, CRUD)
+- Data: data/db/AppDatabase.kt (Room database singleton)
+- Engine: engine/TextExtractor.kt (pattern-based text extraction with regex for errors, code, math, UI, forms)
+- Engine: engine/ImageAnalyzer.kt (analysis engine with detailed explanations)
+- Logger: logger/DebugLogger.kt (persistent file logger with SA-xxx error codes)
+- Theme: ui/theme/Color.kt (Dark theme with neon orange/pink palette)
+- Theme: ui/theme/Theme.kt (Material 3 dark color scheme)
+- Components: ui/components/Components.kt (GlowButton, NeonCard, SectionHeader, EmptyState, StatusBadge, AnalysisTypeBadge, InfoRow)
+- ViewModel: ui/screens/AppViewModel.kt (state management, Room operations, image handling)
+- Screens: ui/screens/home/HomeScreen.kt (dashboard with stats, types, recent analyses)
+- Screens: ui/screens/capture/CaptureScreen.kt (image picker, instructions, analyze trigger)
+- Screens: ui/screens/result/ResultScreen.kt (analysis explanation, detected elements, extracted text)
+- Screens: ui/screens/history/HistoryScreen.kt (searchable history, delete all)
+- Screens: ui/screens/export/ExportScreen.kt (copy, share, export options)
+- Screens: ui/screens/settings/SettingsScreen.kt (version, updates, share, about, features, privacy)
+
+Key Changes:
+- Complete offline screenshot analysis with pattern-matching engine
+- 6 analysis types: Error, Code, UI, Math, Form, General
+- Room database for persistent searchable history
+- Compose UI with Material 3 dark theme and neon accents
+- Bottom navigation: Home, Analyze, History, Settings
+- Image import via content resolver with local caching
+- Clipboard copy, text share, and full report export
+- GitHub Actions: debug APK on push, signed release on tag v*
+- ARM64-only build targeting SDK 34
+- Debug logger with file rotation at 5MB
