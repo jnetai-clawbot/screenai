@@ -228,6 +228,6 @@ private fun buildShareText(result: com.jnetaol.screenai.data.model.AnalysisResul
     sb.appendLine("Analysis:")
     sb.appendLine(result.explanation)
     sb.appendLine()
-    sb.appendLine("Made with ScreenAI by jnetaol.com")
+    sb.appendLine("Made with ScreenAI by jnetai.com")
     return sb.toString()
 }

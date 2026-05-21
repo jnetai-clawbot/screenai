@@ -10,6 +10,6 @@ class ScreenAIApp : Application() {
     override fun onCreate() {
         super.onCreate()
         DebugLogger.init(filesDir)
-        DebugLogger.i("ScreenAIApp", "ScreenAI v1.0.0 starting")
+        DebugLogger.i("ScreenAIApp", "ScreenAI v1.0.1 starting")
     }
 }

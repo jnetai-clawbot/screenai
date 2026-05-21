@@ -30,4 +30,4 @@ Intelligent screenshot analysis app that runs entirely offline on your Android d
 
 ## License
 
-Proprietary. Made by jnetaol.com.
+Proprietary. Made by jnetai.com.

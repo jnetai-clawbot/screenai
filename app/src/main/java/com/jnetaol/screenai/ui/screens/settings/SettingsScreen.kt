@@ -25,7 +25,7 @@ fun SettingsScreen(
     onBack: () -> Unit
 ) {
     val context = LocalContext.current
-    val versionName = "1.0.0"
+    val versionName = "1.0.1"
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -70,7 +70,7 @@ fun SettingsScreen(
                     label = "Check For Updates",
                     subtitle = "You're running the latest version",
                     onClick = {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetaol.com"))
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetai.com"))
                         context.startActivity(intent)
                     }
                 )
@@ -85,7 +85,7 @@ fun SettingsScreen(
                             putExtra(Intent.EXTRA_SUBJECT, "ScreenAI - Screenshot Explainer")
                             putExtra(
                                 Intent.EXTRA_TEXT,
-                                "Check out ScreenAI - an offline screenshot analyzer that explains errors, code, UI elements, math, and forms!\n\nMade by jnetaol.com"
+                                "Check out ScreenAI - an offline screenshot analyzer that explains errors, code, UI elements, math, and forms!\n\nMade by jnetai.com"
                             )
                         }
                         context.startActivity(Intent.createChooser(intent, "Share ScreenAI"))
@@ -156,14 +156,14 @@ fun SettingsScreen(
 
                     Surface(
                         onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetaol.com"))
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetai.com"))
                             context.startActivity(intent)
                         },
                         shape = RoundedCornerShape(10.dp),
                         color = NeonOrange.copy(alpha = 0.1f)
                     ) {
                         Text(
-                            text = "Made By jnetaol.com",
+                            text = "Made By jnetai.com",
                             modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
                             color = NeonOrange,
                             fontWeight = FontWeight.Medium,
